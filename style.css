@@ -1010,7 +1010,6 @@ li {
   border-radius: var(--border-radius-lg);
   overflow: hidden;
   transition: all var(--transition-base);
-  height: 100%;
 }
 
 .card:hover,

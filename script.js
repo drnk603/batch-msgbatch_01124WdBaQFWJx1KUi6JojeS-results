@@ -244,7 +244,7 @@
           const emailValue = emailInput.value.trim();
           if (emailValue.length === 0) {
             showError(emailInput, 'Lūdzu, ievadiet e-pasta adresi.');
-          } else if (!/^[^s@]+@[^s@]+.[^s@]+$/.test(emailValue)) {
+          } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailValue)) {
             showError(emailInput, 'Lūdzu, ievadiet derīgu e-pasta adresi.');
           }
         }
@@ -254,7 +254,7 @@
           const phoneValue = phoneInput.value.trim();
           if (phoneValue.length === 0) {
             showError(phoneInput, 'Lūdzu, ievadiet tālruņa numuru.');
-          } else if (!/^[ds+-()]{7,20}$/.test(phoneValue)) {
+          } else if (!/^[\d\s+\-()]{7,20}$/.test(phoneValue)) {
             showError(phoneInput, 'Lūdzu, ievadiet derīgu tālruņa numuru (7-20 cipari).');
           }
         }

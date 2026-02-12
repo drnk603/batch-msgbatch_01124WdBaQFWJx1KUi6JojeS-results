@@ -1,30 +1,101 @@
 <!DOCTYPE html><html lang="lv"><head>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://domain.com/#org",
+      "name": "domain",
+      "url": "https://domain.com",
+      "email": "assistant@domain.com",
+      "telephone": "+371 6 6991620",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Skanste City, Skanstes iela 50, Floor 3, Office 302, LV-1013 Rīga"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer support",
+        "email": "assistant@domain.com",
+        "telephone": "+371 6 6991620"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://domain.com/#website",
+      "url": "https://domain.com",
+      "name": "domain",
+      "publisher": {
+        "@id": "https://domain.com/#org"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://domain.com/privacy.html#webpage",
+      "url": "https://domain.com/privacy.html",
+      "name": "Privātuma politika | Interjera Dizaina Studija",
+      "isPartOf": {
+        "@id": "https://domain.com/#website"
+      },
+      "about": {
+        "@id": "https://domain.com/#org"
+      },
+      "inLanguage": "lv",
+      "description": "Privātuma"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://domain.com/privacy.html#breadcrumbs",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://domain.com"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Privacy.Html",
+          "item": "https://domain.com/privacy.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
   <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/png" href="/favicon.png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
- </head>
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+<link rel="stylesheet" href="./header-footer.css">
+<link rel="stylesheet" href="./consent.css">
+<script src="./consent.js"></script>
+</head>
  <body>
-  <header class="l-header">
-   <nav class="navbar navbar-expand-md sticky-top bg-white border-bottom" aria-label="Galvenā navigācija">
-    <div class="container-fluid">
-     <a class="navbar-brand" href="/" aria-label="Interjera Dizains sākumlapa"> 
-      <svg width="150" height="40" viewBox="0 0 150 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-       <rect width="150" height="40" fill="#5D1A1A"></rect> <text x="75" y="25" font-family="sans-serif" font-size="16" font-weight="700" fill="#FFD4C8" text-anchor="middle">INTERJERA DIZAINS</text>
-      </svg> 
-     </a>
-     <button class="c-nav__toggle navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Pārslēgt navigāciju"><span class="navbar-toggler-icon"></span></button>
-     <div class="collapse navbar-collapse" id="mainNav">
-      <ul class="navbar-nav ms-auto mb-2 mb-md-0">
-       <li class="nav-item"><a class="nav-link" href="/" aria-current="page">Sākums</a></li>
-       <li class="nav-item"><a class="nav-link" href="/about.html">Par Mums</a></li>
-       <li class="nav-item"><a class="nav-link" href="/services.html">Pakalpojumi</a></li>
-       <li class="nav-item"><a class="nav-link" href="/contact.html">Kontakti</a></li>
+<header class="dr-header" data-dr-variant="v1">
+  <div class="dr-header-inner">
+    <a class="dr-logo" href="./index.html" aria-label="domain">domain</a>
+
+    <nav class="dr-nav" aria-label="Primary navigation">
+      <ul class="dr-nav-list">
+        <li class="dr-nav-item"><a class="dr-nav-link" href="./index.html">Home</a></li><li class="dr-nav-item"><a class="dr-nav-link" href="./about.html">About</a></li><li class="dr-nav-item"><a class="dr-nav-link" href="./contact.html">Contact</a></li><li class="dr-nav-item"><a class="dr-nav-link" href="./services.html">Services</a></li>
       </ul>
-      <a href="/contact.html" class="btn btn-primary ms-md-3">Sazināties</a>
-     </div>
-    </div>
-   </nav>
-  </header>
+    </nav>
+
+    <button class="dr-burger" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="dr-mobile-menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+<nav class="dr-mobile-menu" id="dr-mobile-menu" aria-label="Mobile navigation">
+  <ul class="dr-mobile-nav-list">
+    <li class="dr-nav-item"><a class="dr-nav-link" href="./index.html">Home</a></li><li class="dr-nav-item"><a class="dr-nav-link" href="./about.html">About</a></li><li class="dr-nav-item"><a class="dr-nav-link" href="./contact.html">Contact</a></li><li class="dr-nav-item"><a class="dr-nav-link" href="./services.html">Services</a></li>
+  </ul>
+</nav>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width," initial-scale="1.0">
   <title>Privātuma politika | Interjera Dizaina Studija</title>
@@ -61,11 +132,11 @@
          <h2 class="h4" mb-3\_="">2. Datu pārzinis</h2>
          <p><strong>Nosaukums:</strong> Interjera Dizaina Studija
           <br>
-          <strong>Adrese:</strong> {address}
+          <strong>Adrese:</strong> Skanste City, Skanstes iela 50, Floor 3, Office 302, LV-1013 Rīga
           <br>
-          <strong>Tālrunis:</strong> {telephone}
+          <strong>Tālrunis:</strong> +371 6 6991620
           <br>
-          <strong>E-pasts:</strong> info@domain.com</p>
+          <strong>E-pasts:</strong> assistant@domain.com</p>
         </section>
         <section class="mb-5">
          <h2 class="h4" mb-3\_="">3. Kādi personas dati tiek vākti</h2>
@@ -196,9 +267,9 @@
          <div class="card" mt-3\_="">
           <div class="card-body">
            <p class="mb-2"><strong>Interjera Dizaina Studija</strong></p>
-           <p class="mb-2"><strong>Adrese:</strong> {address}</p>
-           <p class="mb-2"><strong>Tālrunis:</strong> {telephone}</p>
-           <p class="mb-2"><strong>E-pasts:</strong> info@domain.com</p>
+           <p class="mb-2"><strong>Adrese:</strong> Skanste City, Skanstes iela 50, Floor 3, Office 302, LV-1013 Rīga</p>
+           <p class="mb-2"><strong>Tālrunis:</strong> +371 6 6991620</p>
+           <p class="mb-2"><strong>E-pasts:</strong> assistant@domain.com</p>
           </div>
          </div>
          <p class="mt-3">Mēs atbildēsim uz jūsu pieprasījumu 30 dienu laikā no tā saņemšanas.</p>
@@ -211,7 +282,7 @@
            <p class="mb-2"><strong>Datu valsts inspekcija</strong></p>
            <p class="mb-2">Adrese: Blaumaņa iela 11/13-15, Rīga, LV-1011, Latvija</p>
            <p class="mb-2">Tālrunis: +371 67 22 31 31</p>
-           <p class="mb-2">E-pasts: info@domain.com</p>
+           <p class="mb-2">E-pasts: assistant@domain.com</p>
            <p class="mb-0">Tīmekļa vietne: <a href="https://www.dvi.gov.lv" target="_blank" rel="noopener" noreferrer\_="">www.dvi.gov.lv</a></p>
           </div>
          </div>
@@ -233,60 +304,60 @@
    </section>
   </main>
   "
-  <footer class="l-footer bg-dark text-light py-4 py-md-5">
-   <div class="container">
-    <div class="row g-4">
-     <div class="col-md-4">
-      <h3 class="h5 fw-bold mb-3">Interjera Dizains</h3>
-      <p class="mb-3" style="color: #ccc;">Profesionāls dzīvojamo un biroja telpu dizains Latvijā. Radām telpas, kas iedvesmo.</p>
-      <p class="mb-1" style="color: #ccc;">
-       <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="me-2" style="display: inline-block; vertical-align: middle;">
-        <path d="M8 0L10 6H16L11 10L13 16L8 12L3 16L5 10L0 6H6L8 0Z" fill="#FFD4C8"></path>
-       </svg>
-       <strong>Adrese:</strong> {address}
-      </p>
-      <p class="mb-1" style="color: #ccc;">
-       <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="me-2" style="display: inline-block; vertical-align: middle;">
-        <circle cx="8" cy="8" r="7" stroke="#FFD4C8" stroke-width="1.5"></circle> <path d="M5 6L8 9L11 6" stroke="#FFD4C8" stroke-width="1.5"></path>
-       </svg>
-       <strong>Tālrunis:</strong> <a href="tel:{telephone}" class="text-light" style="text-decoration: none;">{telephone}</a>
-      </p>
-      <p class="mb-0" style="color: #ccc;">
-       <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="me-2" style="display: inline-block; vertical-align: middle;">
-        <rect x="2" y="4" width="12" height="9" stroke="#FFD4C8" stroke-width="1.5"></rect> <path d="M2 4L8 9L14 4" stroke="#FFD4C8" stroke-width="1.5"></path>
-       </svg>
-       <strong>E-pasts:</strong> <a href="mailto:info@domain.com" class="text-light" style="text-decoration: none;">info@domain.com</a>
-      </p>
-     </div>
-     <div class="col-md-4">
-      <h3 class="h5 fw-bold mb-3">Ātrās Saites</h3>
-      <ul class="list-unstyled">
-       <li class="mb-2"><a href="/" class="text-light" style="text-decoration: none;">Sākums</a></li>
-       <li class="mb-2"><a href="/about.html" class="text-light" style="text-decoration: none;">Par Mums</a></li>
-       <li class="mb-2"><a href="/services.html" class="text-light" style="text-decoration: none;">Pakalpojumi</a></li>
-       <li class="mb-2"><a href="/contact.html" class="text-light" style="text-decoration: none;">Kontakti</a></li>
-      </ul>
-     </div>
-     <div class="col-md-4">
-      <h3 class="h5 fw-bold mb-3">Juridiskā Informācija</h3>
-      <ul class="list-unstyled">
-       <li class="mb-2"><a href="/privacy.html" class="text-light" style="text-decoration: none;">Privātuma Politika</a></li>
-       <li class="mb-2"><a href="/terms_and_conditions.html" class="text-light" style="text-decoration: none;">Noteikumi un Nosacījumi</a></li>
-       <li class="mb-2"><a href="/terms_of_services.html" class="text-light" style="text-decoration: none;">Pakalpojumu Noteikumi</a></li>
-       <li class="mb-2"><a href="/cookie_policy.html" class="text-light" style="text-decoration: none;">Sīkdatņu Politika</a></li>
-       <li class="mb-2"><a href="/gdpr-rights.html" class="text-light" style="text-decoration: none;">GDPR Tiesības</a></li>
-       <li class="mb-2"><a href="/impressum.html" class="text-light" style="text-decoration: none;">Impressum</a></li>
-      </ul>
-     </div>
+  <footer class="dr-footer">
+  <div class="dr-footer-inner">
+    <div class="dr-footer-top">
+      <div class="dr-footer-brand">
+        <div class="dr-footer-logo">INTERJERA DIZAINS</div>
+        <p class="dr-footer-tagline">Profesionāls interjera dizains jūsu telpai.</p>
+      </div>
+      <nav class="dr-footer-nav" aria-label="Galvenā navigācija">
+        <h2 class="dr-footer-heading">Navigācija</h2>
+        <ul class="dr-footer-nav-list">
+          <li class="dr-footer-nav-item"><a href="./index.html" class="dr-footer-link">Home</a></li>
+          <li class="dr-footer-nav-item"><a href="./about.html" class="dr-footer-link">About</a></li>
+          <li class="dr-footer-nav-item"><a href="./contact.html" class="dr-footer-link">Contact</a></li>
+          <li class="dr-footer-nav-item"><a href="./services.html" class="dr-footer-link">Services</a></li>
+        </ul>
+      </nav>
+      <nav class="dr-footer-legal" aria-label="Juridiskā informācija">
+        <h2 class="dr-footer-heading">Juridiskā informācija</h2>
+        <ul class="dr-footer-legal-list">
+          <li class="dr-footer-legal-item"><a href="./privacy.html" class="dr-footer-link">Privacy Policy</a></li>
+          <li class="dr-footer-legal-item"><a href="./terms_of_services.html" class="dr-footer-link">Terms of Service</a></li>
+          <li class="dr-footer-legal-item"><a href="./terms_and_conditions.html" class="dr-footer-link">Terms and Conditions</a></li>
+          <li class="dr-footer-legal-item"><a href="./cookie_policy.html" class="dr-footer-link">Cookie Policy</a></li>
+          <li class="dr-footer-legal-item"><a href="./gdpr-rights.html" class="dr-footer-link">GDPR Rights</a></li>
+          <li class="dr-footer-legal-item"><a href="./impressum.html" class="dr-footer-link">Impressum</a></li>
+        </ul>
+      </nav>
+      <div class="dr-footer-contact">
+        <h2 class="dr-footer-heading">Kontakti</h2>
+        <ul class="dr-footer-contact-list">
+          <li class="dr-footer-contact-item"><span class="dr-footer-contact-label">Adrese:</span> <span class="dr-footer-contact-value">Skanste City, Skanstes iela 50, Floor 3, Office 302, LV-1013 Rīga</span></li>
+          <li class="dr-footer-contact-item"><span class="dr-footer-contact-label">Tālrunis:</span> <a href="tel:+371 6 6991620" class="dr-footer-link">+371 6 6991620</a></li>
+          <li class="dr-footer-contact-item"><span class="dr-footer-contact-label">E-pasts:</span> <a href="mailto:assistant@domain.com" class="dr-footer-link">assistant@domain.com</a></li>
+        </ul>
+      </div>
     </div>
-    <hr class="my-4" style="border-color: rgba(255,255,255,0.1);">
-    <div class="row">
-     <div class="col-12 text-center">
-      <p class="mb-0" style="color: #ccc; font-size: 0.9rem;">© 2025 Interjera Dizains. Visas tiesības aizsargātas.</p>
-     </div>
+    <div class="dr-footer-bottom">
+      <p class="dr-footer-disclaimer">Informācija šajā vietnē tiek sniegta tikai vispārīgai informatīvai izmantošanai un nevar aizstāt individuālu konsultāciju. "domain" un vietne "domain.com" neuzņemas atbildību par jebkādiem tiešiem vai netiešiem zaudējumiem, kas radušies, izmantojot šeit sniegto informāciju.</p>
+      <p class="dr-footer-meta"><span class="dr-year"></span> © domain. All rights reserved.</p>
     </div>
-   </div>
-  </footer>
-  <script src="script.js" defer=""></script>
+  </div>
+</footer>
+  
  
+  
+  
+
+<script src="script.js" defer=""></script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+if (typeof AOS !== "undefined" && !window.__AOS_INITIALIZED__) {
+  AOS.init({ once: true, duration: 700, easing: "ease-out-cubic" });
+  window.__AOS_INITIALIZED__ = true;
+}
+</script>
+<script src="./header-footer.js"></script>
 </body></html>
